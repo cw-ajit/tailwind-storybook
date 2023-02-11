@@ -1,5 +1,4 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
@@ -12,7 +11,7 @@ const PATHS = {
 
 module.exports = {
     entry: {
-        app: PATHS.SOURCE_DIR + "/index.js",
+        app: PATHS.SOURCE_DIR + "/indexv1.js",
     },
     output: {
         path: PATHS.BUILD_DIR,
@@ -77,8 +76,5 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin(),
-        new HtmlWebpackPlugin({
-            template: PATHS.SOURCE_DIR + "/index.html",
-        }),
     ],
 }
